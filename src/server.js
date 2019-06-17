@@ -1,4 +1,5 @@
 import hapi from "@hapi/hapi"
+import { mongoClient } from './mongo'
 
 export const createDbRestService = ({
     h = hapi
@@ -26,7 +27,10 @@ export const createDbRestService = ({
 
     return {
         start: () => {
-            return server.start().then(() => { console.log("Server Started") })
+            return server.start().then(() => { 
+                console.log("Server Started")
+                mongoClient.connect()
+            })
         }
     }
 }

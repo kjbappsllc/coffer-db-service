@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/kjbappsllc/coffer-db-service#readme",
   "dependencies": {
-    "@hapi/hapi": "^18.3.1"
+    "@hapi/hapi": "^18.3.1",
+    "mongodb": "^3.2.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
